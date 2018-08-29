@@ -144,6 +144,58 @@
 //    return 0;
 //}
 
+//删除整数中的定个数，剩余最大值30%
+
+//#include<iostream>
+//#include<string>
+//#include<algorithm>
+//using namespace std;
+//
+//int main(){
+//    string str;
+//    int count;
+//    cin>>str>>count;
+//    while(count--){
+//        int s =str.size();
+//        int min = 0;
+//        for(int i = 0;i < s;++i){
+//            if(str[i] < str[min])
+//                min = i;
+//        }
+//        str.erase(min,1);
+//    }
+//    cout<<str<<endl;
+//    return 0;
+//}
+
+
+////修订版80%
+//
+//#include<iostream>
+//#include<string>
+//#include<algorithm>
+//using namespace std;
+//
+//int main(){
+//    string str;
+//    int count;
+//    cin>>str>>count;
+//    while(count--){
+//        int s =str.size();
+//        int i；
+//        for(i = 0;i < s;++i){
+//            if(str[i] < str[i+1])
+//                break;
+//        }
+//        str.erase(i,1);
+//    }
+//    cout<<str<<endl;
+//    return 0;
+//}
+
+
+//修订版100%
+
 #include<iostream>
 #include<string>
 #include<algorithm>
@@ -155,15 +207,16 @@ int main(){
     cin>>str>>count;
     while(count--){
         int s =str.size();
-        int min = 0;
-        for(int i = 0;i < s;++i){
-            if(str[i] < str[min])
-                min = i;
+        int i;
+        for(i = 0;i < s-1;++i){
+            if(str[i] < str[i+1])
+                break;
         }
-        str.erase(min,1);
+        if(str[i] < str[i+1])
+            str.erase(i,1);
+        else
+            str.erase(str.size()-1,1);
     }
     cout<<str<<endl;
     return 0;
 }
-
-
