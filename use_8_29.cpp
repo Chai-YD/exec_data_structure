@@ -112,35 +112,58 @@
 //}
 
 
-//输出所有在m和n范围内的水仙花数
+////输出所有在m和n范围内的水仙花数
+//#include<iostream>
+//#include<algorithm>
+//using namespace std;
+//
+//int main(){
+//    int n,m;
+//    cin>>m>>n;
+//    if(m > n){
+//        cout<<"no"<<endl;
+//        return 0;
+//    }
+//    int flag = 0;
+//    for(int i = m; i < n;++i){
+//        int sum = 0;
+//        int num =i;
+//        while(num){
+//            int val = num%10;
+//            sum += val*val*val;
+//            num /=10;
+//        }
+//        if(sum == i){
+//            flag = 1;
+//            cout<<i<<" ";
+//        }
+//    }
+//    if(flag == 0){
+//        cout<<"no"<<endl;
+//    }
+//    return 0;
+//}
+
 #include<iostream>
+#include<string>
 #include<algorithm>
 using namespace std;
 
 int main(){
-    int n,m;
-    cin>>m>>n;
-    if(m > n){
-        cout<<"no"<<endl;
-        return 0;
-    }
-    int flag = 0;
-    for(int i = m; i < n;++i){
-        int sum = 0;
-        int num =i;
-        while(num){
-            int val = num%10;
-            sum += val*val*val;
-            num /=10;
+    string str;
+    int count;
+    cin>>str>>count;
+    while(count--){
+        int s =str.size();
+        int min = 0;
+        for(int i = 0;i < s;++i){
+            if(str[i] < str[min])
+                min = i;
         }
-        if(sum == i){
-            flag = 1;
-            cout<<i<<" ";
-        }
+        str.erase(min,1);
     }
-    if(flag == 0){
-        cout<<"no"<<endl;
-    }
+    cout<<str<<endl;
     return 0;
 }
+
 
