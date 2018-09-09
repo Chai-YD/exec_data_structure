@@ -45,3 +45,27 @@
 //    return 0;
 //}
 
+////输入两个数n，m；求1:n中的任意个数的和为m的元素。
+//#include<iostream>
+//using namespace std;
+//
+//void Find(int n,int m){
+//    ;
+//}
+//
+//int main(){
+//    int n,m;
+//    cin>>n>>m;
+//    if(n <= 0 || m<= 0){
+//        return 0;
+//    }
+//    if(n == 1 && m > 1){
+//        return 0;
+//    }
+//    if(n > m){
+//        n = m ;
+//    }
+//    Find(n,m);
+//    return 0;
+//}
+
